@@ -1,5 +1,6 @@
 import { getTicketById } from "@/app/actions/ticket.action";
 import { getPriorityColor } from "@/app/utils/ui";
+import CloseTicketButton from "@/components/CloseTicketButton";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -41,12 +42,12 @@ const TicketDetailsPage = async (props: {
           ← Back to Tickets
         </Link>
 
-        {/* {ticket.status !== 'Closed' && (
+        {ticket.status !== "Closed" && (
           <CloseTicketButton
             ticketId={ticket.id}
-            isClosed={ticket.status === 'Closed'}
+            isClosed={ticket.status === "Closed"}
           />
-        )} */}
+        )}
       </div>
     </div>
   );

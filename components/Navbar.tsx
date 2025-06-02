@@ -8,8 +8,11 @@ const Navbar = async () => {
   return (
     <nav className="bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
       <div>
-        <Link href="/" className="text-xl font-bold text-blue-600">
-          QuickTicket
+        <Link
+          href="/"
+          className="text-2xl uppercase font-bold hover:text-blue-800 text-blue-700"
+        >
+          Swift Ticket
         </Link>
       </div>
       <div className="flex items-center space-x-4">
@@ -17,15 +20,9 @@ const Navbar = async () => {
           <>
             <Link
               href="/tickets/new"
-              className="hover:underline text-gray-700 transition"
+              className="hover:underline text-white bg-blue-700 px-4 py-2 font-bold transition"
             >
               New Ticket
-            </Link>
-            <Link
-              href="/tickets"
-              className="hover:underline text-gray-700 transition"
-            >
-              My Tickets
             </Link>
 
             <LogoutButton />
